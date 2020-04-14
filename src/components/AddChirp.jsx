@@ -2,16 +2,18 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 export class AddChirp extends Component {
+
     state = {
         title: ''
     }
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.addChirp(this.state.title);
+        this.props.updateList(this.state.title);
         this.setState({ title: ' ' });
     }
 
+    //Enter data into form
     onChange = (e) => this.setState({
         [e.target.name]:
             e.target.value
@@ -23,7 +25,7 @@ export class AddChirp extends Component {
                 <input
                     type="text"
                     name="title"
-                    style={{ flex: '10', padding: '5px' }}
+                    style={{ flex: '45', padding: '6px' }}
                     placeholder="Add Chirp"
                     value={this.state.title}
                     onChange={this.onChange}
@@ -40,7 +42,7 @@ export class AddChirp extends Component {
     }
 }
 
-//Proptypes
+// //Proptypes 
 AddChirp.propTypes = {
     AddChirp: PropTypes.func
 }

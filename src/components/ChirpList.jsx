@@ -10,15 +10,11 @@ class ChirpList extends Component {
         // mapping through the array list from App.js class component
         return this.props.list.map((c) => (
             <Chirp key={c.id} c={c} markRead=
-                {this.props.markRead} />
+                {this.props.markRead} delChirp={this.props.delChirp}/>
         ));
     }
 
 }
-
-
-
-
 
 
 //Prop types

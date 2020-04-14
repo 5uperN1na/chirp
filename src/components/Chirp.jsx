@@ -6,12 +6,12 @@ export class Chirp extends Component {
     getStyle = () => {
         return {
             // ternary operator
-            textDecoration: this.props.c.completed ?
+            textDecoration: this.props.c.read ?
                 'line-through' : 'none',
-            background: 'pink',
-            color: 'green',
-            padding: '50 px',
-            borderBottom: '25px'
+            background: '#FFDFD3',
+            color: 'grey',
+            padding: '5 px',
+            borderBottom: '5px'
         }
 
 
@@ -27,7 +27,9 @@ export class Chirp extends Component {
             <div style={this.getStyle()}>
                 <p><input type="checkbox" onChange={this.props.markRead.bind
                     (this, id)} /> {' '}
-                    {title}</p>
+                    {title}
+                    <button onClick = {this.props.delChirp.bind(this, id)} style={btnStyle}>X</button>
+                    </p>
             </div>
         )
     }
@@ -36,6 +38,16 @@ export class Chirp extends Component {
 //Prop types
 Chirp.propTypes = {
     c: PropTypes.object.isRequired
+}
+
+let btnStyle = {
+    background: '#C8D6B9',
+    color: 'white',
+    border: 'none',
+    padding: '5px, 9px',
+    borderRadius: '50%',
+    cursor: 'pointer',
+    float: 'right'
 }
 
 
