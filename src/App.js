@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import ChirpList from './components/ChirpList';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//Class based componenet that extends from React base class
+//Initalize State
+
+class App extends Component {
+  state = {
+    //array of objects of chirps
+    list: [
+      {
+        id: 1,
+        title: "This is the first chrip!  Chirp...ssssssssffffffff",
+        completed: false
+      },
+
+      {
+        id: 2,
+        title: "This is the second chrip!  Chirp, Chirp...rrrrrrrrrrrrrrrrr",
+        completed: true
+      },
+
+      {
+        id: 3,
+        title: "This is the third chrip!  Chirp, Chirp, Chirp...bbbbbbbbbbbbbb",
+        completed: false
+      }
+
+    ]
+  }
+
+  markRead = (id) => {
+
+  }
+
+  render() {
+    return (
+      <div className="App">
+        {/* Passing array of objects properties to the ChirpList component */}
+        <ChirpList list={this.state.list} markRead={this.markRead} />
+
+      </div>
+    );
+  }
+
 }
 
 export default App;
+
+
+
