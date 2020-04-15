@@ -1,23 +1,24 @@
 import React from 'react'
-import bird from './bird.jpg';
+import bird2 from './bird2.jpg';
 
 function Header() {
     return (
-       <header style = {headerStyle}>
-           <h1>Chirper!</h1>
-           <img src={bird} className="App-logo" alt="logo" />
+        <header style={headerStyle}>
+            <p align="middle">
+                <img src={bird2} className="App-logo" alt="logo" />
+            </p>
 
- 
-}
-       </header>
-       
+
+        </header>
+
     )
 }
 
+
 let headerStyle = {
-    background: '#FAF3DD',
-    color: 'grey',
-    padding: '1px'
+    background: '#7ab2e1',
+    color: 'black'
 
 }
+
 export default Header

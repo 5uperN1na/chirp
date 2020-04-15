@@ -26,7 +26,7 @@ export class AddChirp extends Component {
                     type="text"
                     name="title"
                     style={{ flex: '45', padding: '6px' }}
-                    placeholder="Add Chirp"
+                    placeholder="Have something to say? ...Chirp away!"
                     value={this.state.title}
                     onChange={this.onChange}
                 />
