@@ -41,15 +41,21 @@ Chirp.propTypes = {
 }
 
 let btnStyle = {
-    background: '#C8D6B9',
+    background: 'grey',
     color: 'white',
     border: 'none',
     padding: '5px, 9px',
-    borderRadius: '50%',
+    borderRadius: '75%',
     cursor: 'pointer',
     float: 'right'
 }
 
+//Prop types
+Chirp.propTypes = {
+    list: PropTypes.array.isRequired,
+    markRead: PropTypes.func.isRequired,
+    delChirp: PropTypes.func.isRequired,
+}
 
 
 export default Chirp

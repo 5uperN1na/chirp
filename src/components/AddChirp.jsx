@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class AddChirp extends Component {
 
@@ -26,7 +26,7 @@ export class AddChirp extends Component {
                     type="text"
                     name="title"
                     style={{ flex: '45', padding: '6px' }}
-                    placeholder="Have something to say? ...Chirp away!"
+                    placeholder="Have something to say? ...Chirper away!"
                     value={this.state.title}
                     onChange={this.onChange}
                 />
@@ -42,9 +42,13 @@ export class AddChirp extends Component {
     }
 }
 
+
+
+
 // //Proptypes 
 AddChirp.propTypes = {
     AddChirp: PropTypes.func
+  
 }
 
 export default AddChirp

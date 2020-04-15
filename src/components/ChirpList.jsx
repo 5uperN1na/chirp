@@ -19,7 +19,9 @@ class ChirpList extends Component {
 
 //Prop types
 ChirpList.propTypes = {
-    list: PropTypes.array.isRequired
+    list: PropTypes.array.isRequired,
+    markRead: PropTypes.func.isRequired,
+    delChirp: PropTypes.func.isRequired,
 }
 
 
